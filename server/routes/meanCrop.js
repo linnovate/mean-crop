@@ -12,22 +12,6 @@ module.exports = function(MeanCrop, app, auth, database) {
 
     app.get('/meanCrop/crop', function(req, res) {
 
-        var path = config.root + req.query.dest;
-        path = path.split(osSep);
-        path.pop();
-        path = path.toString();
-        path = path.replace(/,/g, '/');
-
-
-
-        if (!fs.existsSync(path)) {
-            mkdir_p(path, function(err) {
-                crop();
-            });
-        } else {
-            crop();
-        }
-
         function mkdir_p(path, callback, position) {
             var parts = require('path').normalize(path).split(osSep);
             position = position || 0;
@@ -54,11 +38,9 @@ module.exports = function(MeanCrop, app, auth, database) {
 
         function crop() {
             var c = JSON.parse(req.query.coords);
-            console.log(config.root, req.query.src, req.query.dest);
             gm(config.root + req.query.src)
                 .crop(c.w, c.h, c.x, c.y)
                 .write(config.root + req.query.dest, function(err) {
-                    console.log(err);
                     if (!err) {
                         res.jsonp({
                             success: true,
@@ -75,6 +57,19 @@ module.exports = function(MeanCrop, app, auth, database) {
                 });
         }
 
+        var path = config.root + req.query.dest;
+        path = path.split(osSep);
+        path.pop();
+        path = path.toString();
+        path = path.replace(/,/g, '/');
+
+        if (!fs.existsSync(path)) {
+            mkdir_p(path, function(err) {
+                crop();
+            });
+        } else {
+            crop();
+        }
     });
 
     app.get('/meanCrop/example/render', function(req, res, next) {

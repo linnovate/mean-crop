@@ -9,6 +9,8 @@ angular.module('mean.mean-crop').controller('MeanCropController', ['$scope', 'Gl
 
         $scope.cropCallback = function(data) {
             console.log(data);
+            if (data.success)
+                $scope.showViewBtn = true;
         };
     }
 ]);
