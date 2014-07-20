@@ -24,17 +24,17 @@ MeanCrop.register(function(app, auth, database) {
         menu: 'main'
     });
 
-    MeanCrop.aggregateAsset('js', '/packages/mean-crop/public/assets/lib/Jcrop/js/jquery.Jcrop.min.js', {
+    MeanCrop.aggregateAsset('js', '/node_modules/mean-crop/public/assets/lib/Jcrop/js/jquery.Jcrop.min.js', {
         absolute: true
     });
-    MeanCrop.aggregateAsset('js', '/packages/mean-crop/public/assets/lib/Jcrop/js/jquery.color.js', {
+    MeanCrop.aggregateAsset('js', '/node_modules/mean-crop/public/assets/lib/Jcrop/js/jquery.color.js', {
         absolute: true
     });
-    MeanCrop.aggregateAsset('css', '/packages/mean-crop/public/assets/lib/Jcrop/css/jquery.Jcrop.css', {
+    MeanCrop.aggregateAsset('css', '/node_modules/mean-crop/public/assets/lib/Jcrop/css/jquery.Jcrop.css', {
         absolute: true
     });
 
-    MeanCrop.aggregateAsset('css', '/packages/mean-crop/public/assets/css/meanCrop.css', {
+    MeanCrop.aggregateAsset('css', '/node_modules/mean-crop/public/assets/css/meanCrop.css', {
         absolute: true
     });
 
