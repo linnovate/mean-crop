@@ -1,0 +1,20 @@
+{
+    "name": "mean-crop",
+    "version": "0.0.1",
+    "description": "Some description of mean-crop",
+    "author": {
+        "name": "mean scaffold"
+    },
+    "mean": "0.4.0",
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.4.x"
+    },
+    "scripts": {
+        "postinstall": "node ../../node_modules/bower/bin/bower install"
+    },
+    "dependencies": {
+        "gm": "1.16.0"
+    },
+    "license": "MIT"
+}
