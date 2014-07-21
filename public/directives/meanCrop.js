@@ -6,7 +6,9 @@ angular.module('mean.mean-crop').directive('meanCrop', function($http) {
         scope: {
             imgSrc: '=',
             cropDest: '=',
-            cropCallback: '&'
+            cropCallback: '&',
+            width: '=',
+            height: '=',
         },
         restrict: 'E',
         replace: true,
@@ -24,14 +26,18 @@ angular.module('mean.mean-crop').directive('meanCrop', function($http) {
                     });
                 }
             }
+
+            $('#mean-crop-pane .mean-crop-container').width($scope.width);
+            $('#mean-crop-pane .mean-crop-container').height($scope.height);
+
             var jcrop_api,
                 boundx,
                 boundy,
 
                 // Grab some information about the preview pane
-                $preview = $('#preview-pane'),
-                $pcnt = $('#preview-pane .preview-container'),
-                $pimg = $('#preview-pane .preview-container img'),
+                $preview = $('#mean-crop-pane'),
+                $pcnt = $('#mean-crop-pane .mean-crop-container'),
+                $pimg = $('#mean-crop-pane .mean-crop-container img'),
 
                 xsize = $pcnt.width(),
                 ysize = $pcnt.height();
@@ -53,8 +59,8 @@ angular.module('mean.mean-crop').directive('meanCrop', function($http) {
             });
 
             $scope.crop = function() {
-                $http.get('/meanCrop/crop?coords=' + JSON.stringify($scope.coords) + '&src=' + $scope.imgSrc + '&dest=' + $scope.cropDest).success(function(data) {
-                    if (data.success) {
+                $http.get('/meanCrop/crop?coords=' + JSON.stringify($scope.coords) + '&src=' + $scope.imgSrc + '&w=' + $scope.width + '&h=' + $scope.height).success(function(data) {
+                    if (data) {
                         if (angular.isDefined(attrs.cropCallback)) {
                             $scope.cropCallback({
                                 data: data

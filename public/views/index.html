@@ -1,9 +1,5 @@
 <div class="" data-ng-controller="MeanCropController">
     <h1>Example view from your new awesome package</h1>
     <h2>Package: {{package.name}}</h2>
-    <mean-crop img-src="'/packages/mean-crop/public/assets/img/ninja.png'" crop-dest="'/packages/photos/main/crop.png'" crop-callback="cropCallback(data)"></mean-crop>
-    <button data-ng-show="showViewBtn" data-ng-click="showView=true" class="btn btn-info">
-        View img
-    </button>
-    <img src="/packages/photos/main/crop.png" alt="" data-ng-show="showView">
+    <mean-crop width="250" height="170" img-src="'/packages/articles/public/assets/img/logo.png'" crop-callback="cropCallback(data)"></mean-crop>
 </div>

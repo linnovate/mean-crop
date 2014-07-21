@@ -1,7 +1,7 @@
 .meanCrop-example h1: {
     background-color: purple
 }
-.jcrop-holder #preview-pane {
+.jcrop-holder #mean-crop-pane {
     display: block;
     position: absolute;
     z-index: 2000;
@@ -17,7 +17,7 @@
     -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
 }
-#preview-pane .preview-container {
+#mean-crop-pane .mean-crop-container {
     width: 250px;
     height: 170px;
     overflow: hidden;
