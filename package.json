@@ -14,7 +14,8 @@
         "postinstall": "node ../../node_modules/bower/bin/bower install"
     },
     "dependencies": {
-        "gm": "1.16.0"
+        "gm": "1.16.0",
+        "mean-health": "~0.1.2"
     },
     "license": "MIT"
 }
