@@ -1,21 +1,27 @@
 {
-    "name": "mean-crop",
-    "version": "0.0.1",
-    "description": "Some description of mean-crop",
-    "author": {
-        "name": "Ori Persik"
-    },
-    "mean": "0.4.0",
-    "engines": {
-        "node": "0.10.x",
-        "npm": "1.4.x"
-    },
-    "scripts": {
-        "postinstall": "node ../../node_modules/bower/bin/bower install"
-    },
-    "dependencies": {
-        "gm": "1.16.0",
-        "mean-health": "~0.1.2"
-    },
-    "license": "MIT"
+  "name": "mean-crop",
+  "version": "0.0.1",
+  "description": "Some description of mean-crop",
+  "author": {
+    "name": "Ori Persik"
+  },
+  "mean": "0.4.0",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.4.x"
+  },
+  "scripts": {
+    "postinstall": "node ../../node_modules/bower/bin/bower install"
+  },
+  "dependencies": {
+    "gm": "1.16.0",
+    "mean-health": "~0.1.2"
+  },
+  "license": "MIT",
+  "readme": "README: meanCrop\nNot ready to be used!!!\n",
+  "readmeFilename": "README.md",
+  "_id": "mean-crop@0.0.1",
+  "_shasum": "8fb5b5656950455bdd8f344e9f596fcdd643cd1c",
+  "_from": "https://github.com/linnovate/mean-crop/tarball/master",
+  "_resolved": "https://github.com/linnovate/mean-crop/tarball/master"
 }
