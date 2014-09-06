@@ -29,7 +29,6 @@ angular.module('mean.mean-crop').directive('meanWindowCrop', function($http) {
         }
       });
       $scope.crop = function() {
-        console.log($scope.coords);
         $http.get('/meanCrop/crop?coords=' + JSON.stringify($scope.coords) + '&src=/' + $scope.imgSrc + '&w=' + $scope.targetWidth + '&h=' + $scope.targetHeight).success(function(data) {
           if (data) {
             if (angular.isDefined(attrs.cropCallback)) {
