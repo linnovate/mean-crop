@@ -5,7 +5,7 @@
  */
 var Module = require('meanio').Module;
 
-var MeanCrop = new Module('mean-crop');
+var MeanCrop = new Module('crop');
 
 /*
  * All MEAN packages require registration
@@ -24,27 +24,27 @@ MeanCrop.register(function(app, auth, database) {
     menu: 'main'
   });
 
-  MeanCrop.aggregateAsset('js', '/node_modules/mean-crop/public/assets/lib/Jcrop/js/jquery.Jcrop.min.js', {
+  MeanCrop.aggregateAsset('js', '../assets/lib/Jcrop/js/jquery.Jcrop.min.js', {
     absolute: true
   });
 
-  MeanCrop.aggregateAsset('js', '/node_modules/mean-crop/public/assets/lib/Jcrop/js/jquery.color.js', {
+  MeanCrop.aggregateAsset('js', '../assets/lib/Jcrop/js/jquery.color.js', {
     absolute: true
   });
 
-  MeanCrop.aggregateAsset('css', '/node_modules/mean-crop/public/assets/lib/Jcrop/css/jquery.Jcrop.css', {
+  MeanCrop.aggregateAsset('css', '../assets/lib/Jcrop/css/jquery.Jcrop.css', {
     absolute: true
   });
 
-  MeanCrop.aggregateAsset('css', '/node_modules/mean-crop/public/assets/css/meanCrop.css', {
+  MeanCrop.aggregateAsset('css', '../assets/css/meanCrop.css', {
     absolute: true
   });
 
-  MeanCrop.aggregateAsset('js', '/node_modules/mean-crop/public/assets/lib/jWindowCrop/jquery.jWindowCrop.js', {
+  MeanCrop.aggregateAsset('js', '../assets/lib/jWindowCrop/jquery.jWindowCrop.js', {
     absolute: true
   });
 
-  MeanCrop.aggregateAsset('css', '/node_modules/mean-crop/public/assets/lib/jWindowCrop/jWindowCrop.css', {
+  MeanCrop.aggregateAsset('css', '../assets/lib/jWindowCrop/jWindowCrop.css', {
     absolute: true
   });
 

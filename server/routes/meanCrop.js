@@ -76,7 +76,7 @@ module.exports = function(MeanCrop, app, auth, database) {
 
     app.get('/meanCrop/example/render', function(req, res, next) {
         MeanCrop.render('index', {
-            package: 'mean-crop'
+            package: 'crop'
         }, function(err, html) {
             //Rendering a view from the Package server/views
             res.send(html);

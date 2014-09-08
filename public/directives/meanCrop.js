@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('mean.mean-crop').directive('meanCrop', function($http) {
+angular.module('mean.crop').directive('meanCrop', function($http) {
     return {
-        templateUrl: 'mean-crop/views/directives/meanCrop.html',
+        templateUrl: 'crop/views/directives/meanCrop.html',
         scope: {
             imgSrc: '=',
             cropDest: '=',
