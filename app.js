@@ -24,29 +24,17 @@ MeanCrop.register(function(app, auth, database) {
     menu: 'main'
   });
 
-  MeanCrop.aggregateAsset('js', '../lib/Jcrop/js/jquery.Jcrop.min.js', {
-    absolute: true
-  });
+  MeanCrop.aggregateAsset('js', '../lib/Jcrop/js/jquery.Jcrop.min.js');
 
-  MeanCrop.aggregateAsset('js', '../lib/Jcrop/js/jquery.color.js', {
-    absolute: true
-  });
+  MeanCrop.aggregateAsset('js', '../lib/Jcrop/js/jquery.color.js');
 
-  MeanCrop.aggregateAsset('css', '../lib/Jcrop/css/jquery.Jcrop.css', {
-    absolute: true
-  });
+  MeanCrop.aggregateAsset('css', '../lib/Jcrop/css/jquery.Jcrop.css');
 
-  MeanCrop.aggregateAsset('css', '../css/meanCrop.css', {
-    absolute: true
-  });
+  MeanCrop.aggregateAsset('css', '../css/meanCrop.css');
 
-  MeanCrop.aggregateAsset('js', '../lib/jWindowCrop/jquery.jWindowCrop.js', {
-    absolute: true
-  });
+  MeanCrop.aggregateAsset('js', '../lib/jWindowCrop/jquery.jWindowCrop.js');
 
-  MeanCrop.aggregateAsset('css', '../lib/jWindowCrop/jWindowCrop.css', {
-    absolute: true
-  });
+  MeanCrop.aggregateAsset('css', '../lib/jWindowCrop/jWindowCrop.css');
 
   /**
   //Uncomment to use. Requires meanio@0.3.7 or above
