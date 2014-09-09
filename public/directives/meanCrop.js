@@ -13,11 +13,11 @@ angular.module('mean.crop').directive('meanCrop', function($http) {
     restrict: 'E',
     replace: true,
     link: function($scope, element, attrs) {
-      $scope.$parent.imgSrc = $scope.imgSrc;
-      $scope.$parent.targetWidth = $scope.targetWidth;
-      $scope.$parent.targetHeight = $scope.targetHeight;
-      $scope.$parent.destDir = $scope.destDir;
-      $scope.$parent.packagePath = $scope.packagePath;
+      $scope.$root.imgSrc = $scope.imgSrc;
+      $scope.$root.targetWidth = $scope.targetWidth;
+      $scope.$root.targetHeight = $scope.targetHeight;
+      $scope.$root.destDir = $scope.destDir;
+      $scope.$root.packagePath = $scope.packagePath;
 
       function updatePreview(c) {
         $scope.coords = c;
@@ -31,7 +31,7 @@ angular.module('mean.crop').directive('meanCrop', function($http) {
             marginTop: '-' + Math.round(ry * c.y) + 'px'
           });
         }
-        $scope.$parent.coords = $scope.coords;
+        $scope.$root.coords = $scope.coords;
       }
 
       $('#mean-crop-pane .mean-crop-container').width($scope.targetWidth);

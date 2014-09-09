@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('mean.crop').controller('MeanCropController', ['$scope', 'Global', 'MeanCrop',
-  function($scope, Global, MeanCrop) {
+angular.module('mean.crop').controller('MeanCropController', ['$rootScope', '$rootScope', 'Global', 'MeanCrop',
+  function($scope, $rootScope, Global, MeanCrop) {
     $scope.global = Global;
     $scope.package = {
       name: 'crop'
@@ -13,7 +13,7 @@ angular.module('mean.crop').controller('MeanCropController', ['$scope', 'Global'
     };
 
     $scope.crop = function() {
-      MeanCrop.cropImage(JSON.stringify($scope.coords), $scope.imgSrc, $scope.targetWidth, $scope.targetHeight, $scope.packagePath, $scope.destDir)
+      MeanCrop.cropImage(JSON.stringify($rootScope.coords), $rootScope.imgSrc, $rootScope.targetWidth, $rootScope.targetHeight, $rootScope.packagePath, $rootScope.destDir)
         .success(function(data) {
           console.log(data);
         });

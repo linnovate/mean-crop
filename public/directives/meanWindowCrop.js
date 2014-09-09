@@ -14,11 +14,11 @@ angular.module('mean.crop').directive('meanWindowCrop', function($http) {
     restrict: 'E',
     replace: true,
     link: function($scope, element, attrs) {
-      $scope.$parent.imgSrc = $scope.imgSrc;
-      $scope.$parent.targetWidth = $scope.targetWidth;
-      $scope.$parent.targetHeight = $scope.targetHeight;
-      $scope.$parent.destDir = $scope.destDir;
-      $scope.$parent.packagePath = $scope.packagePath;
+      $scope.$root.imgSrc = $scope.imgSrc;
+      $scope.$root.targetWidth = $scope.targetWidth;
+      $scope.$root.targetHeight = $scope.targetHeight;
+      $scope.$root.destDir = $scope.destDir;
+      $scope.$root.packagePath = $scope.packagePath;
 
       $('img.crop_me').jWindowCrop({
         targetWidth: $scope.targetWidth, //Width of facebook cover division
@@ -35,7 +35,7 @@ angular.module('mean.crop').directive('meanWindowCrop', function($http) {
             'h': $scope.targetHeight
           };
 
-          $scope.$parent.coords = $scope.coords;
+          $scope.$root.coords = $scope.coords;
         }
       });
     }
