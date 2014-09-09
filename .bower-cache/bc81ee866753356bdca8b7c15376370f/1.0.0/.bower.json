@@ -1,0 +1,13 @@
+{
+  "name": "jWindowCrop",
+  "homepage": "https://github.com/tybro0103/jWindowCrop",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "f3396de428797431af6cd1b36483ece505e31ffa"
+  },
+  "_source": "https://github.com/tybro0103/jWindowCrop.git",
+  "_target": "*"
+}

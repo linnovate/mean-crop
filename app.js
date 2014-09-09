@@ -18,8 +18,15 @@ MeanCrop.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   MeanCrop.menus.add({
-    title: 'meanCrop example page',
-    link: 'meanCrop example page',
+    title: 'jWindowCrop example page',
+    link: 'jWindowCrop example page',
+    roles: ['authenticated'],
+    menu: 'main'
+  });
+
+  MeanCrop.menus.add({
+    title: 'jCrop example page',
+    link: 'jCrop example page',
     roles: ['authenticated'],
     menu: 'main'
   });
