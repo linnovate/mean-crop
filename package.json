@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Some description of mean-crop",
   "author": {
-    "name": "Ori Persik"
+    "name": "Piyuesh Kumar",
+    "email": "piyuesh23@qed42.com"
   },
   "mean": "0.4.0",
   "engines": {
@@ -20,7 +21,6 @@
     "path": "0.4.9"
   },
   "license": "MIT",
-  "readme": "README: meanCrop\nNot ready to be used!!!\n",
   "readmeFilename": "README.md",
   "_id": "mean-crop@0.0.1",
   "_shasum": "8fb5b5656950455bdd8f344e9f596fcdd643cd1c",
