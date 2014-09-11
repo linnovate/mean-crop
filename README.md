@@ -46,6 +46,7 @@ You need to have [ImageMagick](http://www.imagemagick.org/) installed, otherwise
     ```
 
   * jCrop
+
     ```HTML
         <div class="" data-ng-controller="MeanCropController">
           <div class="example-container">
@@ -57,7 +58,7 @@ You need to have [ImageMagick](http://www.imagemagick.org/) installed, otherwise
 
 * *Controller*
 
-```javascript
+    ```javascript
       'use strict';
       angular.module('mean.crop').controller('MeanCropController', ['$rootScope', '$rootScope', 'Global', 'MeanCrop',
         function($scope, $rootScope, Global, MeanCrop) {
@@ -70,7 +71,7 @@ You need to have [ImageMagick](http://www.imagemagick.org/) installed, otherwise
           };
         }
       ]);
-```
+    ```
 ## Demo
 
 * http://localhost:3000/#!/meanCrop/example - Examples of both the directives listed down here.
