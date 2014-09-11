@@ -36,41 +36,32 @@ You need to have [ImageMagick](http://www.imagemagick.org/) installed, otherwise
 
   * jWindowCrop
 
-     <pre>
-      <code>
+    ```HTML
         <div class="" data-ng-controller="MeanCropController">
           <div class="example-container">
             <mean-window-crop target-width="100" target-height="100" img-src="'crop/assets/img/logo.png'" dest-dir="'packages/images/thumbs'" package-path="'packages/contrib'" convert-imgsrc="true"></mean-window-crop>
             <button class="btn btn-success" data-ng-click="crop()">Crop</button>
           </div>
         </div>
-      </code>
-    </pre>
-
+    ```
 
   * jCrop
-    <pre>
-      <code>
+    ```HTML
         <div class="" data-ng-controller="MeanCropController">
           <div class="example-container">
             <mean-crop target-width="100" target-height="100" img-src="'crop/assets/img/logo.png'" dest-dir="'packages/images/thumbs'" package-path="'packages/contrib'" convert-imgsrc="true"></mean-crop>
             <button class="btn btn-success" data-ng-click="crop()">Crop</button>
           </div>
         </div>
-      </code>
-    </pre>
-
+    ```
 
 * *Controller*
 
-  <pre>
-    <code>
+```javascript
       'use strict';
-
       angular.module('mean.crop').controller('MeanCropController', ['$rootScope', '$rootScope', 'Global', 'MeanCrop',
         function($scope, $rootScope, Global, MeanCrop) {
           $scope.global = Global;
-
           $scope.crop = function() {
             MeanCrop.cropImage(JSON.stringify($rootScope.coords), $rootScope.imgSrc, $rootScope.targetWidth, $rootScope.targetHeight, $rootScope.packagePath, $rootScope.convertImgsrc, $rootScope.destDir)
               .success(function(data) {
@@ -79,9 +70,7 @@ You need to have [ImageMagick](http://www.imagemagick.org/) installed, otherwise
           };
         }
       ]);
-    </code>
-  </pre>
-
+```
 ## Demo
 
 * http://localhost:3000/#!/meanCrop/example - Examples of both the directives listed down here.
