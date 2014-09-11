@@ -8,7 +8,8 @@ angular.module('mean.crop').directive('meanCrop', function($http) {
       targetWidth: '=',
       targetHeight: '=',
       packagePath: '=',
-      destDir: '='
+      destDir: '=',
+      convertImgsrc: '='
     },
     restrict: 'E',
     replace: true,
@@ -18,6 +19,7 @@ angular.module('mean.crop').directive('meanCrop', function($http) {
       $scope.$root.targetHeight = $scope.targetHeight;
       $scope.$root.destDir = $scope.destDir;
       $scope.$root.packagePath = $scope.packagePath;
+      $scope.$root.convertImgsrc = $scope.convertImgsrc;
 
       function updatePreview(c) {
         $scope.coords = c;

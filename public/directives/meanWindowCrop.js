@@ -8,7 +8,8 @@ angular.module('mean.crop').directive('meanWindowCrop', function($http) {
       targetWidth: '=',
       targetHeight: '=',
       packagePath: '=',
-      destDir: '='
+      destDir: '=',
+      convertImgsrc: '='
     },
     // scope: false,
     restrict: 'E',
@@ -19,6 +20,7 @@ angular.module('mean.crop').directive('meanWindowCrop', function($http) {
       $scope.$root.targetHeight = $scope.targetHeight;
       $scope.$root.destDir = $scope.destDir;
       $scope.$root.packagePath = $scope.packagePath;
+      $scope.$root.convertImgsrc = $scope.convertImgsrc;
 
       $('img.crop_me').jWindowCrop({
         targetWidth: $scope.targetWidth, //Width of facebook cover division

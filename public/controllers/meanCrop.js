@@ -13,7 +13,7 @@ angular.module('mean.crop').controller('MeanCropController', ['$rootScope', '$ro
     };
 
     $scope.crop = function() {
-      MeanCrop.cropImage(JSON.stringify($rootScope.coords), $rootScope.imgSrc, $rootScope.targetWidth, $rootScope.targetHeight, $rootScope.packagePath, $rootScope.destDir)
+      MeanCrop.cropImage(JSON.stringify($rootScope.coords), $rootScope.imgSrc, $rootScope.targetWidth, $rootScope.targetHeight, $rootScope.packagePath, $rootScope.convertImgsrc, $rootScope.destDir)
         .success(function(data) {
           console.log(data);
         });

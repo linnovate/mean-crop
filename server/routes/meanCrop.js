@@ -58,10 +58,15 @@ module.exports = function(MeanCrop, app, auth, database) {
   }
 
   app.get('/meanCrop/crop', function(req, res) {
-    var packageParts = req.query.src.split('/');
-    var packageName = packageParts[0];
-    var packageRelativePath = packageParts.splice(1).join('/');
-    var imgSrc = Path.resolve(config.root, req.query.packagePath, packageName, 'public', packageRelativePath);
+    var imgSrc = Path.resolve(config.root, packageRelativePath);
+
+    if (req.query.convertImgsrc === true) {
+      var packageParts = req.query.src.split('/');
+      var packageName = packageParts[0];
+      var packageRelativePath = packageParts.splice(1).join('/');
+      imgSrc = Path.resolve(config.root, req.query.packagePath, packageName, 'public', packageRelativePath);
+    }
+
     var imgDest = req.query.destDir;
 
     if (!fs.existsSync(config.root + imgDest)) {
@@ -81,7 +86,7 @@ module.exports = function(MeanCrop, app, auth, database) {
     MeanCrop.render('index', {
       package: 'crop'
     }, function(err, html) {
-      //Rendering a view from the Package server/views
+      // Rendering a view from the Package server/views
       res.send(html);
     });
   });
