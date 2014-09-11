@@ -72,6 +72,7 @@ You need to have [ImageMagick](http://www.imagemagick.org/) installed, otherwise
         }
       ]);
     ```
+
 ## Demo
 
   * http://localhost:3000/#!/meanCrop/example - Examples of both the directives listed down here.
