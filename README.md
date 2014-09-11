@@ -74,6 +74,6 @@ You need to have [ImageMagick](http://www.imagemagick.org/) installed, otherwise
     ```
 ## Demo
 
-* http://localhost:3000/#!/meanCrop/example - Examples of both the directives listed down here.
-* Select the area that you want to crop & click on crop button.
-* Browse to packages/images/thumbs/<image-resolution>/logo.png to check the cropped selection.
+  * http://localhost:3000/#!/meanCrop/example - Examples of both the directives listed down here.
+  * Select the area that you want to crop & click on crop button.
+  * Browse to packages/images/thumbs/<image-resolution>/logo.png to check the cropped selection.
