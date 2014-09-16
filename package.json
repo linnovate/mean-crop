@@ -1,8 +1,7 @@
 {
   "name": "crop",
   "version": "0.0.1",
-  "description": "Crops the images on the angular end using jCrop/jwindowCrop
-  and uploads the cropped image on the server",
+  "description": "Crops the images on the angular end using jCrop/jwindowCrop and uploads the cropped image on the server",
   "author": {
     "name": "Piyuesh Kumar",
     "email": "piyuesh23@qed42.com"
