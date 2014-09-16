@@ -5,7 +5,7 @@
  */
 var Module = require('meanio').Module;
 
-var MeanCrop = new Module('mean-crop');
+var MeanCrop = new Module('crop');
 
 /*
  * All MEAN packages require registration
@@ -13,52 +13,57 @@ var MeanCrop = new Module('mean-crop');
  */
 MeanCrop.register(function(app, auth, database) {
 
-    //We enable routing. By default the Package Object is passed to the routes
-    MeanCrop.routes(app, auth, database);
+  //We enable routing. By default the Package Object is passed to the routes
+  MeanCrop.routes(app, auth, database);
 
-    //We are adding a link to the main menu for all authenticated users
-    MeanCrop.menus.add({
-        title: 'meanCrop example page',
-        link: 'meanCrop example page',
-        roles: ['authenticated'],
-        menu: 'main'
-    });
+  //We are adding a link to the main menu for all authenticated users
+  MeanCrop.menus.add({
+    title: 'jWindowCrop example page',
+    link: 'jWindowCrop example page',
+    roles: ['authenticated'],
+    menu: 'main'
+  });
 
-    MeanCrop.aggregateAsset('js', '/node_modules/mean-crop/public/assets/lib/Jcrop/js/jquery.Jcrop.min.js', {
-        absolute: true
-    });
-    MeanCrop.aggregateAsset('js', '/node_modules/mean-crop/public/assets/lib/Jcrop/js/jquery.color.js', {
-        absolute: true
-    });
-    MeanCrop.aggregateAsset('css', '/node_modules/mean-crop/public/assets/lib/Jcrop/css/jquery.Jcrop.css', {
-        absolute: true
-    });
+  MeanCrop.menus.add({
+    title: 'jCrop example page',
+    link: 'jCrop example page',
+    roles: ['authenticated'],
+    menu: 'main'
+  });
 
-    MeanCrop.aggregateAsset('css', '/node_modules/mean-crop/public/assets/css/meanCrop.css', {
-        absolute: true
-    });
+  MeanCrop.aggregateAsset('js', '../lib/Jcrop/js/jquery.Jcrop.min.js');
 
-    /**
-    //Uncomment to use. Requires meanio@0.3.7 or above
-    // Save settings with callback
-    // Use this for saving data from administration pages
-    MeanCrop.settings({
-        'someSetting': 'some value'
-    }, function(err, settings) {
-        //you now have the settings object
-    });
+  MeanCrop.aggregateAsset('js', '../lib/Jcrop/js/jquery.color.js');
 
-    // Another save settings example this time with no callback
-    // This writes over the last settings.
-    MeanCrop.settings({
-        'anotherSettings': 'some value'
-    });
+  MeanCrop.aggregateAsset('css', '../lib/Jcrop/css/jquery.Jcrop.css');
 
-    // Get settings. Retrieves latest saved settigns
-    MeanCrop.settings(function(err, settings) {
-        //you now have the settings object
-    });
-    */
+  MeanCrop.aggregateAsset('css', '../css/meanCrop.css');
 
-    return MeanCrop;
+  MeanCrop.aggregateAsset('js', '../lib/jWindowCrop/jquery.jWindowCrop.js');
+
+  MeanCrop.aggregateAsset('css', '../lib/jWindowCrop/jWindowCrop.css');
+
+  /**
+  //Uncomment to use. Requires meanio@0.3.7 or above
+  // Save settings with callback
+  // Use this for saving data from administration pages
+  MeanCrop.settings({
+      'someSetting': 'some value'
+  }, function(err, settings) {
+      //you now have the settings object
+  });
+
+  // Another save settings example this time with no callback
+  // This writes over the last settings.
+  MeanCrop.settings({
+      'anotherSettings': 'some value'
+  });
+
+  // Get settings. Retrieves latest saved settigns
+  MeanCrop.settings(function(err, settings) {
+      //you now have the settings object
+  });
+  */
+
+  return MeanCrop;
 });

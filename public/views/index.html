@@ -1,5 +1,12 @@
 <div class="" data-ng-controller="MeanCropController">
-    <h1>Example view from your new awesome package</h1>
+  <div class="example-container">
+    <h1>Example view for Mean crop package using crop directive</h1>
     <h2>Package: {{package.name}}</h2>
-    <mean-crop width="250" height="170" img-src="'/packages/articles/public/assets/img/logo.png'" crop-callback="cropCallback(data)"></mean-crop>
+    <mean-crop width="250" height="170" img-src="'crop/assets/img/logo.png'" crop-callback="cropCallback(data)"></mean-crop>
+  </div>
+  <div class="example-container">
+    <h1>Example view for Mean crop package using select directive</h1>
+    <h2>Package: {{package.name}}</h2>
+    <mean-window-crop target-width="100" target-height="100" img-src="'crop/assets/img/logo.png'" crop-callback="cropCallback(data)"></mean-window-crop>
+  </div>
 </div>

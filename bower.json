@@ -2,6 +2,7 @@
     "name": "mean",
     "version": "0.3.3",
     "dependencies": {
-        "Jcrop": "https://github.com/tapmodo/Jcrop.git"
+        "Jcrop": "https://github.com/tapmodo/Jcrop.git",
+        "jWindowCrop": "https://github.com/tybro0103/jWindowCrop.git"
     }
 }
